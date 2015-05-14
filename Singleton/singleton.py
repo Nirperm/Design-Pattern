@@ -1,4 +1,4 @@
-class Singleton(object):
+class Singleton():
     __instance = None
 
     def __new__(cls, *args, **keys):
