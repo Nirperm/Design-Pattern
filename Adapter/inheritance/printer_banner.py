@@ -1,10 +1,11 @@
 from banner import Banner
+from printer import Printer
 
 
-class PrinterBanner(Banner):
+class PrinterBanner(Banner, Printer):
     def __init__(self, string):
         super().__init__(string)
-        # self.__string = string  private
+
     def print_weak(self):
         self.show_with_paren()
 
