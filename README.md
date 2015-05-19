@@ -5,4 +5,4 @@ Refer to [Java言語で学ぶデザインパターン入門](http://goo.gl/MXvJ)
 
 I'm going to publish Design Pattern article periodically.
 
-Factory, Proxy, Strategy are ongoing
+[task](https://github.com/Nirperm/Design-Pattern/issues/2)
