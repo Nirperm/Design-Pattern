@@ -1,7 +1,7 @@
 from singleton import Singleton
 
 
-if __name__ == '__main__':
+def main():
     s1 = Singleton('aaa')
     s2 = Singleton('bbb')
     if s1 is s2:
@@ -10,3 +10,7 @@ if __name__ == '__main__':
         print(s2.get_name())
     else:
         print('s1 is NOT s2')
+
+
+if __name__ == '__main__':
+    main()
