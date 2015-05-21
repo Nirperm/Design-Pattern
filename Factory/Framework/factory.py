@@ -1,12 +1,16 @@
-class Factory():
-    def _create_product(self, owner):
+from abc import ABCMeta, abstractmethod
+
+
+class Factory(metaclass=ABCMeta):
+    @abstractmethod
+    def _createproduct(self, owner):
         pass
 
-    def _register_product(self, product):
+    @abstractmethod
+    def _registerproduct(self, product):
         pass
 
     def create(self, owner):
-        # オーバライドさせない、つまり外部から参照できなくさせる
-        self.__product = self._create_product(owner)
-        self._register_product(self.__product)
-        return self.__product
+        self.__p = self._createproduct(owner)
+        self._registerproduct(self.__p)
+        return self.__p

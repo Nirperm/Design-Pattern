@@ -1,10 +1,7 @@
-# from Framework import factory as Factory
-# from Framework import product as Product
-from IDCard import id_card_factory as IDCardFactory
-# from IDCard import idcard as IDCard
+from IDCard.idcard_factory import IDCardFactory
 
 
-if __name__ == '__main__':
+def main():
     factory = IDCardFactory()
     card1 = factory.create('結城浩')
     card2 = factory.create('とむら')
@@ -13,3 +10,6 @@ if __name__ == '__main__':
     card1.use()
     card2.use()
     card3.use()
+
+if __name__ == '__main__':
+    main()
