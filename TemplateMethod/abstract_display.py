@@ -1,11 +1,16 @@
-class AbstractDisplay():
+from abc import ABCMeta, abstractmethod
 
+class AbstractDisplay(metaclass=ABCMeta):
+
+    @abstractmethod
     def opening(self):
         pass
 
+    @abstractmethod
     def printing(self):
         pass
 
+    @abstractmethod
     def closing(self):
         pass
 

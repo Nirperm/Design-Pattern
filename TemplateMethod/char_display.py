@@ -7,7 +7,7 @@ class CharDisplay(AbstractDisplay):
         self.ch = ch
 
     def opening(self):
-        sys.stdout.write('<<')  # printを使うと出力直後に空白が一文字出てしまう
+        sys.stdout.write('<<')
 
     def printing(self):
         sys.stdout.write(self.ch)
