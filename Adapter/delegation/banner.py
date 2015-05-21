@@ -1,4 +1,5 @@
 class Banner():
+
     def __init__(self, string):
         self.__string = string
 

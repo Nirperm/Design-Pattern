@@ -3,6 +3,7 @@ from banner import Banner
 
 
 class PrinterBanner(Printer):
+
     def __init__(self, string):
         self.__banner = Banner(string)
 

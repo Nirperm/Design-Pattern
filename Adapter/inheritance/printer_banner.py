@@ -2,7 +2,8 @@ from banner import Banner
 from printer import Printer
 
 
-class PrinterBanner(Banner, Printer):
+class PrinterBanner(Banner):
+
     def __init__(self, string):
         super().__init__(string)
 
