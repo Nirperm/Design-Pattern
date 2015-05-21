@@ -2,23 +2,24 @@ from printable import Printable
 from printer import Printer
 
 
-class PrinterProxy(Printable):  # 名前つきのプリンタを表すクラス(代理人)
+class PrinterProxy(Printable):
+
     def __init__(self, name):
-        self.name = name
-        self.real = Printer(self.name)  # FIXME 本来はここではしないはず
+        self.__name = name
+        self.__real = Printer(self.name)  # FIXME 本来はここではしないはず
 
     def set_printer_name(self, name):
         if not(self.real is None):
-            self.real.set_printer_name(name)
+            self.__real.set_printer_name(name)
         self.name = name
 
     def get_printer_name(self):
-        return self.name
+        return self.__name
 
     def my_print(self, string):
         self.__realize()
-        self.real.my_print(string)
+        self.__real.my_print(string)
 
     def __realize(self):
-        if (self.real is None):
-            self.real = Printer(self.name)
+        if (self.__real is None):
+            self.__real = Printer(self.name)
