@@ -4,7 +4,7 @@ from prob_strategy import ProbStrategy
 from player import Player
 
 
-if __name__ == "__main__":
+def main():
     try:
         if len(sys.argv) != 2:
             seed1 = int(sys.argv[1])
@@ -33,3 +33,6 @@ if __name__ == "__main__":
         print('Check args size, does not work')
         print('usage: python main random_seed1 random_seed2')
         print('Example: python main.py 314 15')
+
+if __name__ == "__main__":
+    main()

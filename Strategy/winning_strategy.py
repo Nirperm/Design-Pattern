@@ -5,14 +5,14 @@ from strategy import Strategy
 
 class WinningStrategy(Strategy):
 
-    def __init__(self):
-        self._rand = random.randint(1, 3)
-        self._won = False
+    def __init__(self, seed):
+        self.__rand = random.randint(1, seed)
+        self.__won = False
 
     def next_hand(self):
-        if not(self._won):
-            prev_hand = Hand.get_hand(self._rand)
-        return prev_hand
+        if not(self.__won):
+            __prev_hand = Hand.get_hand(self.__rand)
+        return __prev_hand
 
     def study(self, win):
-        self._won = win
+        self.__won = win
