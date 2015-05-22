@@ -3,10 +3,10 @@ import time
 from printable import Printable
 
 
-class Printer(Printable):   # 名前つきのプリンタを表すクラス(本人)
+class Printer(Printable):
 
     def __init__(self, name):
-        self.__heavy_job('Printerのインスタンス生成中')
+        self.__name = name
 
     def set_printer_name(self, name):
         self.__name = name
@@ -23,7 +23,7 @@ class Printer(Printable):   # 名前つきのプリンタを表すクラス(�
         print(msg)
         for i in range(1, 5):
             try:
-                time.sleep(1)
+                time.sleep(1)  # TODO  Thread.sleep
             except InterruptedError:
                 sys.stdout.write('.')
-        sys.stdout.write('完了')
+        print('完了')

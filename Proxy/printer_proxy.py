@@ -6,12 +6,12 @@ class PrinterProxy(Printable):
 
     def __init__(self, name):
         self.__name = name
-        self.__real = Printer(self.name)  # FIXME 本来はここではしないはず
+        self.__real = Printer(self.__name)  # FIXME 本来はここではしないはず
 
     def set_printer_name(self, name):
-        if not(self.real is None):
+        if not(self.__real is None):
             self.__real.set_printer_name(name)
-        self.name = name
+        self.__name = name
 
     def get_printer_name(self):
         return self.__name
@@ -22,4 +22,4 @@ class PrinterProxy(Printable):
 
     def __realize(self):
         if (self.__real is None):
-            self.__real = Printer(self.name)
+            self.__real = Printer(self.__name)

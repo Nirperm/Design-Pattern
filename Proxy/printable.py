@@ -1,7 +1,7 @@
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 
 
-class Printable(metaclass=ABCMeta):
+class Printable():
 
     @abstractmethod
     def set_printer_name(self, name):

@@ -1,4 +1,3 @@
-# from printable import Printable
 from printer_proxy import PrinterProxy
 
 
