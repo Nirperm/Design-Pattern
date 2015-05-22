@@ -1,7 +1,7 @@
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 
 
-class Printer(metaclass=ABCMeta):
+class Printer():
 
     @abstractmethod
     def print_weak(self):
