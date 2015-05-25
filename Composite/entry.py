@@ -1,17 +1,23 @@
+from abc import ABCMeta, abstractmethod
 from file_treatment_exception import FileTreatmentException
 
 
-class Entry():
+class Entry():  # mataclass=ABCMeta
 
+    @abstractmethod
     def get_name(self):
         pass
 
+    @abstractmethod
     def get_size(self):
         pass
 
     def print_list(self):
-        self.print_list('')
-        # protected abstract void printList(String prefix) FIXME change scope access?
+        self._print_list('')
+        # protected abstract void printList(String prefix) FIXME change scope asccess?
+
+    def _printe_list(self):
+        pass
 
     def add(self):
         FileTreatmentException.except_file_treatment()  # FIXME ??

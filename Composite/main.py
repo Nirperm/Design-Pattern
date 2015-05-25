@@ -4,7 +4,7 @@ from file_treatment_exception import FileTreatmentException
 from my_file import MyFile
 
 
-if __name__ == "__main__":
+def main():
     try:
         print('Making root entries')
         rootdir = Directory('root')
@@ -33,3 +33,6 @@ if __name__ == "__main__":
         rootdir.print_list()
     except FileTreatmentException as e:
         logging.exception('FileTreatmentException: {0}'.format(e))
+
+if __name__ == "__main__":
+    main()

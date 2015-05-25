@@ -2,13 +2,13 @@ from entry import Entry
 
 
 class Directory(Entry):
-    directory = []
+    __directory = []
 
     def __init__(self, name):
-        self._name = name
+        self.__name = name
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def get_size(self):
         size = 0
@@ -17,10 +17,11 @@ class Directory(Entry):
         return size
 
     def add(self, entry):
-        self.directory.add(entry)
+        self.__directory.append(entry)  # FIXME java list add?
+        # http://qiita.com/sukoyakarizumu/items/490402b6fa52cb7c4023
         return self
 
     def _print_list(self, prefix):
-        print(prefix + '/' + self)  # FIXME ??
-        for d_name in self.directory:
-            super(Directory, d_name).print_list(prefix + '/' + self.name)
+        # print(prefix + '/' + self)  # FIXME ??
+        for d_name in self.__directory:
+            super(Directory, d_name).print_list(prefix + '/' + self.__name)
