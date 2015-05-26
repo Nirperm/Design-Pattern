@@ -13,15 +13,14 @@ class Directory(Entry):
     def get_size(self):
         size = 0
         for d_name in self.directory:
-            size += super(Directory, d_name).get_size()
+            size += super(Directory, self).get_size()
         return size
 
     def add(self, entry):
-        self.__directory.append(entry)  # FIXME java list add?
-        # http://qiita.com/sukoyakarizumu/items/490402b6fa52cb7c4023
+        self.__directory.append(entry)
         return self
 
     def _print_list(self, prefix):
-        # print(prefix + '/' + self)  # FIXME ??
+        print(prefix + '/' + self.get_name())
         for d_name in self.__directory:
-            super(Directory, d_name).print_list(prefix + '/' + self.__name)
+            print(prefix + '/' + d_name.get_name())

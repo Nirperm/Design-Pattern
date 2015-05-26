@@ -6,7 +6,7 @@ from my_file import MyFile
 
 def main():
     try:
-        print('Making root entries')
+        print('Making root entries...')
         rootdir = Directory('root')
         bindir = Directory('bin')
         tmpdir = Directory('tmp')
@@ -19,12 +19,13 @@ def main():
         rootdir.print_list()
 
         print('')
-        print('Making user entries')
+        print('Making user entries...')
         yuki = Directory('yuki')
         hanako = Directory('hanako')
         tomura = Directory('tomura')
         usrdir.add(yuki)
         usrdir.add(hanako)
+        usrdir.add(tomura)
         yuki.add(MyFile('diary.html', 100))
         yuki.add(MyFile('Composite.py', 200))
         hanako.add(MyFile('memo.txt', 300))

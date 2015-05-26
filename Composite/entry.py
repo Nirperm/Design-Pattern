@@ -2,7 +2,7 @@ from abc import ABCMeta, abstractmethod
 from file_treatment_exception import FileTreatmentException
 
 
-class Entry():  # mataclass=ABCMeta
+class Entry(metaclass=ABCMeta):
 
     @abstractmethod
     def get_name(self):
@@ -14,9 +14,8 @@ class Entry():  # mataclass=ABCMeta
 
     def print_list(self):
         self._print_list('')
-        # protected abstract void printList(String prefix) FIXME change scope asccess?
 
-    def _printe_list(self):
+    def _print_list(self):
         pass
 
     def add(self):
