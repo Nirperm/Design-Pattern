@@ -2,8 +2,9 @@ from abc import ABCMeta
 from display import Display
 
 
-class Border(Display, metaclass=ABCMeta):
+class Border(Display):
 
-    # protected Display display
+    __metaclass__ = ABCMeta
+
     def _border(self, display):
         self._display = display
