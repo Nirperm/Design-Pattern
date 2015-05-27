@@ -2,16 +2,16 @@ class Hand():
     HANDVALUE_ROCK = 0
     HANDVALUE_SCISSORS = 1
     HANDVALUE_PAPER = 2
+    NAMES = ['グー', 'チョキ', 'パー']
+    HANDS = [HANDVALUE_ROCK,
+             HANDVALUE_SCISSORS,
+             HANDVALUE_PAPER]
 
     def __init__(self, handvalue):
-        self.__NAMES = ['グー', 'チョキ', 'パー']
         self.__handvalue = handvalue
-        self.__hand = [self.HANDVALUE_ROCK,
-                       self.HANDVALUE_SCISSORS,
-                       self.HANDVALUE_PAPER]
 
     def get_hand(self, handvalue):
-        return self.__hand[self.__handvalue]
+        return self.HANDS[self.__handvalue]
 
     def is_stronger_than(self, h):
         return self.__fight(h) == 1
@@ -28,4 +28,4 @@ class Hand():
             return -1
 
     def to_string(self):
-        return self.__NAMES[self.__handvalue]
+        return self.NAMES[self.__handvalue]

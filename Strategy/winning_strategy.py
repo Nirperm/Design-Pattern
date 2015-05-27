@@ -11,7 +11,7 @@ class WinningStrategy(Strategy):
 
     def next_hand(self):
         if not(self.__won):
-            __prev_hand = Hand.get_hand(self.__rand)
+            __prev_hand = Hand(self.__rand).get_hand(self.__rand)  # TODO find best solution
         return __prev_hand
 
     def study(self, win):

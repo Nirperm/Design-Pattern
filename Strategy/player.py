@@ -1,11 +1,11 @@
-from strategy import Strategy
+# from strategy import Strategy
 
 
 class Player():
 
     def __init__(self, name, strategy):
         self.__name = name
-        self.__strategy = Strategy
+        self.__strategy = strategy
         self.__wincount = 0
         self.__losecount = 0
         self.__gamecount = 0

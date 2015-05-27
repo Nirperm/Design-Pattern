@@ -12,19 +12,20 @@ class ProbStrategy(Strategy):
         self.__history = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 
     def next_hand(self):
-        bet = self.__rand(self.__get_sum(self.__current_hand_value))
+        bet = random.randint(1, self.__get_sum(self.__current_hand_value))  # TODO find best solution
+        # bet = self.__rand(self.__get_sum(self.__current_hand_value))
         hand_value = 0
         if bet < self.__history[self.__current_hand_value][0]:
             hand_value = 0
         elif bet < self.__history[self.__current_hand_value][0] + \
-                self._history[self.__current_hand_value][1]:
+                self.__history[self.__current_hand_value][1]:
             hand_value = 1
         else:
             hand_value = 2
 
         self.__prev_hand_value = self.__current_hand_value
         self.__current_hand_value = hand_value
-        return Hand.get_hand(hand_value)
+        return Hand(bet).get_hand(hand_value)  # TODO find best solution
 
     def __get_sum(self, hv):
         total = 0
