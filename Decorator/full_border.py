@@ -4,7 +4,6 @@ from border import Border
 class FullBorder(Border):
 
     def __init__(self, display):
-        super(FullBorder, self)
         self.display = display
 
     def get_columns(self):
