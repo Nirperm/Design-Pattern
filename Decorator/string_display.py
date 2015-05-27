@@ -16,4 +16,4 @@ class StringDisplay(Display):
         if row == 0:
             return self.__string
         else:
-            return False
+            return None
