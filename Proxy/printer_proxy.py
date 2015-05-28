@@ -6,10 +6,10 @@ class PrinterProxy(Printable):
 
     def __init__(self, name):
         self.__name = name
-        self.__real = Printer(self.__name)  # FIXME 本来はここではしないはず
+        self.__real = None  # HACK: is this correct?
 
     def set_printer_name(self, name):
-        if not(self.__real is None):
+        if (self.__real is not None):
             self.__real.set_printer_name(name)
         self.__name = name
 
