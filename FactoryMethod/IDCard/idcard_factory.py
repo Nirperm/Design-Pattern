@@ -7,8 +7,8 @@ class IDCardFactory(Factory):
     def __init__(self):
         self.__registed = []
 
-    def _createproduct(self, owner):
+    def _create_product(self, owner):
         return IDCard(owner)
 
-    def _registerproduct(self, product):
-        self.__registed.append(product.getowner())
+    def _register_product(self, product):
+        self.__registed.append(product.get_owner())
