@@ -3,6 +3,9 @@ Learning Design Pattern
 
 Refer to [Java言語で学ぶデザインパターン入門](http://goo.gl/MXvJ), write lines of python code.
 
+Start of \_one_underline(\_~\*) in code means java protected<br>
+Start of \_two_underline(\__~\*) in code means java private
+
 I'm going to publish Design Pattern article periodically.
 
 | Pattern | Qiita |
