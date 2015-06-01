@@ -32,7 +32,7 @@ class ProbStrategy(Strategy):
         total = 0
         for i in range(0, 3):
             total += self.__history[hv][i]
-            total = 2 if total > 2 else total  # TODO find best solution
+        total = 2 if total > 2 else total  # TODO find best solution
         return total
 
     def study(self, win):
