@@ -6,7 +6,7 @@ from strategy import Strategy
 class WinningStrategy(Strategy):
 
     def __init__(self, seed):
-        self.__rand = random.randint(1, seed)
+        self.__rand = seed
         self.__won = False
 
     def next_hand(self):

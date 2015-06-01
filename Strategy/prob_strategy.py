@@ -5,14 +5,15 @@ from strategy import Strategy
 
 class ProbStrategy(Strategy):
 
+    __prev_hand_value = 0
+    __current_hand_value = 0
+    __history = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
     def __init__(self, seed):
-        self.__rand = random.randint(1, seed)
-        self.__prev_hand_value = 0
-        self.__current_hand_value = 0
-        self.__history = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+        self.__rand = seed
 
     def next_hand(self):
-        bet = random.randint(1, self.__get_sum(self.__current_hand_value))  # TODO find best solution
+        bet = random.randint(0, self.__get_sum(self.__current_hand_value))  # TODO find best solution
         # bet = self.__rand(self.__get_sum(self.__current_hand_value))
         hand_value = 0
         if bet < self.__history[self.__current_hand_value][0]:

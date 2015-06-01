@@ -1,14 +1,12 @@
-# from strategy import Strategy
-
-
 class Player():
+
+    __wincount = 0
+    __losecount = 0
+    __gamecount = 0
 
     def __init__(self, name, strategy):
         self.__name = name
         self.__strategy = strategy
-        self.__wincount = 0
-        self.__losecount = 0
-        self.__gamecount = 0
 
     def next_hand(self):
         return self.__strategy.next_hand()
@@ -20,8 +18,8 @@ class Player():
 
     def lose(self):
         self.__strategy.study(False)
-        self.__wincount += 1
         self.__losecount += 1
+        self.__gamecount += 1
 
     def even(self):
         self.__gamecount += 1
