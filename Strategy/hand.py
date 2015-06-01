@@ -20,12 +20,11 @@ class Hand():
         return self.__fight(h) == -1
 
     def __fight(self, h):
-        if self == h:
+        if self.__handvalue == h.__handvalue:
             return 0
-        elif (self.__handvalue + 1) % 3 == self.__handvalue:
+        elif (self.__handvalue + 1) % 3 == h.__handvalue:
             return 1
         else:
-            # FIXME always return -1
             return -1
 
     def to_string(self):

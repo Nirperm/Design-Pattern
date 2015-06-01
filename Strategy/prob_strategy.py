@@ -14,7 +14,6 @@ class ProbStrategy(Strategy):
 
     def next_hand(self):
         bet = random.randint(0, self.__get_sum(self.__current_hand_value))  # TODO find best solution
-        # bet = self.__rand(self.__get_sum(self.__current_hand_value))
         hand_value = 0
         if bet < self.__history[self.__current_hand_value][0]:
             hand_value = 0
@@ -26,20 +25,22 @@ class ProbStrategy(Strategy):
 
         self.__prev_hand_value = self.__current_hand_value
         self.__current_hand_value = hand_value
+
         return Hand(bet).get_hand(hand_value)  # TODO find best solution
 
     def __get_sum(self, hv):
         total = 0
-        for i in range(1, 3):
+        for i in range(0, 3):
             total += self.__history[hv][i]
+            total = 2 if total > 2 else total  # TODO find best solution
         return total
 
     def study(self, win):
         if win:
-            self.__history[self.__prev_hand_value][self.__current_handvalue] \
+            self.__history[self.__prev_hand_value][self.__current_hand_value] \
                 += 1
         else:
-            self.__history[self.__prev_hand_value][(self.__current_handvalue + 1) % 3] \
+            self.__history[self.__prev_hand_value][(self.__current_hand_value + 1) % 3] \
                 += 1
-            self.__history[self.__prev_hand_value][(self.__current_handvalue + 2) % 3] \
+            self.__history[self.__prev_hand_value][(self.__current_hand_value + 2) % 3] \
                 += 1

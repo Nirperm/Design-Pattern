@@ -28,15 +28,15 @@ def main():
         next_hand1 = Hand(player1.next_hand())
         next_hand2 = Hand(player2.next_hand())
         if next_hand1.is_stronger_than(next_hand2):
-            print('Winner + ({0})'.format(player1))
+            print('Winner : {0}'.format(player1.to_stirng()))
             player1.win()
             player2.lose()
         elif next_hand2.is_stronger_than(next_hand1):
-            print('Winner + ({0})'.format(player2))
+            print('Winner : {0}'.format(player2.to_stirng()))
             player1.lose()
             player2.win()
         else:
-            print('Even')
+            print('Even ...')
             player1.even()
             player2.even()
 

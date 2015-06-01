@@ -25,8 +25,7 @@ class Player():
         self.__gamecount += 1
 
     def to_stirng(self):
-        return '([{0}: {1} games \
-                 {2} win {3} lose])'.format(self.__name,
-                                            self.__gamecount,
-                                            self.__wincount,
-                                            self.__losecount)
+        return '[{0}: {1} games {2} win {3} lose]'.format(self.__name,
+                                                          self.__gamecount,
+                                                          self.__wincount,
+                                                          self.__losecount)
