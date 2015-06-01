@@ -25,6 +25,7 @@ class Hand():
         elif (self.__handvalue + 1) % 3 == self.__handvalue:
             return 1
         else:
+            # FIXME always return -1
             return -1
 
     def to_string(self):
