@@ -43,7 +43,7 @@ def main():
     except IndexError:
         print('Check args size, does not work')
         print('usage: python main random_seed1 random_seed2')
-        print('Example: python main.py 0~2 0~2')
+        print('Example: python main.py 314 15')
 
 if __name__ == "__main__":
     main()
