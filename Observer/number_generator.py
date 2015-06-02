@@ -3,8 +3,7 @@ from abc import ABCMeta, abstractmethod
 
 class NumberGenerator(metaclass=ABCMeta):
 
-    def __init__(self):
-        self.__observers = []
+    __observers = []
 
     def add_observer(self, observer):
         self.__observers.append(observer)
@@ -13,14 +12,8 @@ class NumberGenerator(metaclass=ABCMeta):
         self.__observers.remove(observer)
 
     def notify_observers(self):
-        """ this is java
-        Iterator it = observers.iterator();
-        while (it.hasNext()){
-            Observer o = (Observer)it.next();
-            o.update(this)
-        }
-        """
-        pass
+        for observer in self.__observers:
+            observer.update(self)
 
     @abstractmethod
     def get_number():

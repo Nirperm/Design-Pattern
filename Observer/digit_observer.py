@@ -3,10 +3,10 @@ import logging
 from observer import Observer
 
 
-class DigitObserver(Observer):  # FIXME: doule inheritance
+class DigitObserver(Observer):
 
     def update(self, generator):
-        print('DigitObserver:' + generator.get_number())
+        print('DigitObserver:' + str(generator.get_number()))
         try:
             time.sleep(1)
         except InterruptedError as e:
