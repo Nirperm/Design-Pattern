@@ -26,13 +26,12 @@ class ProbStrategy(Strategy):
         self.__prev_hand_value = self.__current_hand_value
         self.__current_hand_value = hand_value
 
-        return Hand(bet).get_hand(hand_value)  # TODO find best solution
+        return Hand(hand_value).get_hand(hand_value)  # TODO find best solution
 
     def __get_sum(self, hv):
         total = 0
         for i in range(0, 3):
             total += self.__history[hv][i]
-        total = 2 if total > 2 else total  # TODO find best solution
         return total
 
     def study(self, win):
