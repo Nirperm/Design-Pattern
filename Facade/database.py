@@ -1,16 +1,15 @@
-import configparser
+from configparser import ConfigParser
 import logging
-import sys
 
 
 class Database():
 
     def get_properties(self, dbname):
-        filename = sys.argv[1]
-        self.filename = dbname + '.txt'
-        self.prop = configparser.ConfigParser()
+        filename = dbname + '.ini'
+        conf = ConfigParser()
         try:
-            self.prop.read(filename)
+            conf.read(filename)
+            user_name = conf['TEST1']['hyuki@hyuki.com']
+            return user_name
         except IOError:
             logging.exception('Warning' + filename + 'is not found.')
-        return self.prop
