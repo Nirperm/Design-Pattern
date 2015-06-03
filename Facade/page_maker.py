@@ -16,6 +16,6 @@ class PageMaker():
             writer.paragraph('メール待っていますね。')
             writer.mailto(mailaddr, user_name)
             writer.close()
-            print(filename + ' ' + 'is created for' + mailaddr + ' ' + '(' + user_name + ')')
+            print(filename + ' ' + 'is created for' + ' ' + mailaddr + ' ' + '(' + user_name + ')')
         except IOError as e:
             logging.exception(e)
