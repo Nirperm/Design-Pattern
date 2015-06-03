@@ -8,7 +8,8 @@ class PageMaker():
     def make_welcome_page(self, mailaddr, filename):
         db = Database()
         try:
-            user_name = db.get_properties('maildata')
+            prob = db.get_properties('maildata')
+            user_name = prob[mailaddr]
             writer = HtmlWriter(open(filename, mode='w'))
             writer.title('Welcome to ' + user_name + 'is page!')
             writer.paragraph(user_name + 'のページへようこそ。')

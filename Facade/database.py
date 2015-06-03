@@ -9,7 +9,7 @@ class Database():
         conf = ConfigParser()
         try:
             conf.read(filename)
-            user_name = conf['TEST1']['hyuki@hyuki.com']
-            return user_name
+            prob = conf['TEST1']
+            return prob
         except IOError:
             logging.exception('Warning' + filename + 'is not found.')
