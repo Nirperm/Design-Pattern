@@ -1,13 +1,9 @@
-# from builder import Builder
-
-
 class Director():
 
     def __init__(self, builder):
         self.__builder = builder
 
     def construct(self):
-        # Optimize: string arity
         self.__builder.make_title('Greeting')
         self.__builder.make_string('朝から昼にかけて')
         string = ['おはようございます', 'こんにちは。']

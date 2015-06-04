@@ -22,4 +22,4 @@ class TextBuilder(Builder):
         self.__buffer.append('=' * 20)
 
     def get_result(self):
-        return self.__buffer  # to_string
+        return self.__buffer
