@@ -10,7 +10,6 @@ def usage():
 
 
 def main():
-    print(sys.argv[1])
     if len(sys.argv) != 2:
         usage()
         sys.exit()
