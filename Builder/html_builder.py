@@ -12,7 +12,7 @@ class HTMLBuilder(Builder):
         except IOError as e:
             logging.exception(e)
 
-        self.__writer.write('<html><head><title>' + title + '</title></head><body>')
+        self.__writer.write('<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>' + title + '</title></head><body>')
         self.__writer.write('<h1>' + title + '<h1>')
 
     def make_string(self, string):
