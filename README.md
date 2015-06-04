@@ -20,5 +20,7 @@ I'm going to publish Design Pattern article periodically.
 | Strategy | [デザインパターン（Design Pattern）#Strategy](http://qiita.com/nirperm/items/a4e7c3c5c8f46235be9c) |
 | Builder | [デザインパターン（Design Pattern）#Builder](http://qiita.com/nirperm/items/2824b11ee006d5e2662f) |
 | Facade | [デザインパターン（Design Pattern）#Facade](http://qiita.com/nirperm/items/9236663abc7e96736af4) |
+| something | someday |
+| something | someday |
 
 [task](https://github.com/Nirperm/Design-Pattern/issues/2)
