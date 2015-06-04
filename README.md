@@ -14,11 +14,11 @@ I'm going to publish Design Pattern article periodically.
 | TemplateMethod | [デザインパターン（Design Pattern） #Template Method](http://qiita.com/nirperm/items/9651c1e0b29cdc31f064)|
 | Factory | [デザインパターン（Design Pattern） #Factory Method](http://qiita.com/nirperm/items/2b979808a025652cbea4)|
 | Decorator |[デザインパターン（Design Pattern）#Decorator](http://qiita.com/nirperm/items/398cb970826fa972a94f)|
-| something | comming soon |
-| something | comming soon |
-| something | comming soon |
-| something | comming soon |
-| something | comming soon |
-| something | comming soon |
+| Observer | [デザインパターン（Design Pattern）#Observer](http://qiita.com/nirperm/items/60ebc707bf35a836f637) |
+| Adapter | [デザインパターン（Design Pattern）#Adapter](http://qiita.com/nirperm/items/2b5c6f39beb70448e6c1) |
+| Proxy | [デザインパターン（Design Pattern）#Proxy](http://qiita.com/nirperm/items/cb200058edb935adb26c) |
+| Strategy | [デザインパターン（Design Pattern）#Strategy](http://qiita.com/nirperm/items/a4e7c3c5c8f46235be9c) |
+| Builder | [デザインパターン（Design Pattern）#Builder](http://qiita.com/nirperm/items/2824b11ee006d5e2662f) |
+| Facade | [デザインパターン（Design Pattern）#Facade](http://qiita.com/nirperm/items/9236663abc7e96736af4) |
 
 [task](https://github.com/Nirperm/Design-Pattern/issues/2)
