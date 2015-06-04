@@ -1,5 +1,4 @@
 from banner import Banner
-from printer import Printer
 
 
 class PrinterBanner(Banner):
