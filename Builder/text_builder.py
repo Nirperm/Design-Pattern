@@ -6,7 +6,7 @@ class TextBuilder(Builder):
 
     def make_title(self, title):
         self.__buffer.append('=' * 20)
-        self.__buffer.append('[' + title + ' ]\n')
+        self.__buffer.append('[' + title + ']\n')
         self.__buffer.append('\n')
 
     def make_string(self, string):
@@ -15,7 +15,7 @@ class TextBuilder(Builder):
 
     def make_items(self, items):
         for i in range(0, len(items)):
-            self.__buffer.append(' ' + items[i] + '\n')
+            self.__buffer.append('●' + items[i] + '\n')
         self.__buffer.append('\n')
 
     def close(self):
